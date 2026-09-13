@@ -1,6 +1,6 @@
 # Olá, sou o Felipe 👋
 
-**CloudOps · DevSecOps · SRE** — automação de infraestrutura, remediação de vulnerabilidades e confiabilidade
+**Cloud Engineer· DevSecOps · SRE** — automação de infraestrutura, remediação de vulnerabilidades e confiabilidade
 de sistemas em produção.
 
 ## 🧰 O que tem por aqui
