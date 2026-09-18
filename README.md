@@ -30,6 +30,17 @@ e o passo a passo equivalente pelo console/portal.
 | 🟢 [**Arquitetura-Kubernetes-GCP**](https://github.com/FelipeFranca07/Arquitetura-Kubernetes-GCP) | Rede, GKE e dados ponta a ponta no Google Cloud — VPC, firewall, Cloud Load Balancing, VPC Peering-Hub, Cloud SQL, GCS e Firestore. |
 | 🔴 [**Arquitetura-Kubernetes-Huawei**](https://github.com/FelipeFranca07/Arquitetura-Kubernetes-Huawei) | Rede, CCE e dados ponta a ponta na Huawei Cloud — VPC, Security Group, ELB, Enterprise Router, RDS, OBS e GaussDB. |
 
+## 🚢 Projeto de referência — CI/CD + GitOps
+
+Também construído do zero para estudo/portfólio: demonstra, de ponta a ponta, o padrão de **GitOps com ArgoCD**
+que times de plataforma usam hoje — o pipeline de CI nunca toca o cluster diretamente, ele só publica a imagem
+e atualiza a *declaração* do estado desejado; quem aplica a mudança é sempre o ArgoCD, sincronizando a partir do Git.
+
+| Repositório | O que faz |
+|---|---|
+| ⚙️ [**Nexus-Api**](https://github.com/FelipeFranca07/Nexus-Api) | API (FastAPI) com testes automatizados e pipeline de CI/CD (GitHub Actions, com equivalentes em Azure DevOps e GitLab CI) que builda, testa, publica a imagem no GHCR e atualiza o repositório GitOps automaticamente. |
+| 🔄 [**Nexus-GitOps**](https://github.com/FelipeFranca07/Nexus-GitOps) | Manifests Kubernetes via Kustomize (overlays dev/staging/prod) e Applications do ArgoCD no padrão *App of Apps* — a fonte da verdade do estado desejado do cluster. |
+
 ## 🧱 Stack
 
 ![Ansible](https://img.shields.io/badge/Ansible-EE0000?style=flat&logo=ansible&logoColor=white)
@@ -51,10 +62,12 @@ e o passo a passo equivalente pelo console/portal.
 ![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=flat&logo=powershell&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black)
 ![Windows Server](https://img.shields.io/badge/Windows%20Server-0078D6?style=flat&logo=windows&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white)
 
 ## 📎 Sobre estes repositórios
 
 > Os repositórios `Ansible-*` documentam um padrão de arquitetura real — a lógica e as decisões de design são
 > genuínas, mas todo dado específico de ambiente (hostnames, IPs, tokens, domínios) foi substituído por exemplos
-> fictícios antes da publicação. Já os repositórios `Arquitetura-Kubernetes-*` são documentação de referência
-> construída do zero para estudo/portfólio, não uma extração de ambiente real.
+> fictícios antes da publicação. Já os repositórios `Arquitetura-Kubernetes-*` e `Nexus-*` são documentação de
+> referência construída do zero para estudo/portfólio, não uma extração de ambiente real.
